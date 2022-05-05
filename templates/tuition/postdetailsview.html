@@ -1,0 +1,23 @@
+{% extends 'basic.html' %} {% block body %} {% load humanize %}
+{{msg}}
+<hr>
+{{post.get_proper_case}}<br> 
+by {{post.user}} <br> {{post.created_at | naturaltime}}<br> 
+{{post.details}}<br> 
+
+{{post.get_subject_list}}<br> 
+{{post.get_class_list}}<br> 
+
+
+{% if request.user == post.user  %} <a href="/tuition/edit/{{post.id}}"> Edit </a> 
+<br/>
+<a href="/tuition/delete/{{post.id}}"> delete </a>
+
+
+{% endif %} 
+
+
+
+<hr>
+<div class="fb-comments" data-href="http://127.0.0.1:8000/tuition/postdetails/{{post.id}}/" data-width="" data-numposts="10"></div>
+ {% endblock body %}

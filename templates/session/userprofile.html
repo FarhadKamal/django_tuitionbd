@@ -1,0 +1,23 @@
+{% extends 'basic.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="{{ user.userprofile.image.url}}" class="w-50" alt="" />
+        </div>
+        <div class="col">
+            Name: {{ user.username }} <br/>
+            Gender: {{ user.userprofile.gender }} <br/>
+            Blood Group: {{ user.userprofile.blood_group }} <br/>
+            Birth Date: {{ user.userprofile.birth_date }} <br/>
+            Address: {{ user.userprofile.address }} <br/>
+            Phone: {{ user.userprofile.phone }} <br/>
+            Nationality: {{ user.userprofile.nationality }} <br/>
+            Religion: {{ user.userprofile.religion }} <br/>
+            Bio Data: {{ user.userprofile.biodata }} <br/>
+            Profession: {{ user.userprofile.profession }} <br/>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

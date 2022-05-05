@@ -1,0 +1,7 @@
+{% extends 'basic.html' %} {% block body %} 
+{{ msg }} <hr>
+{% for p in results %} {{ p.title }} by {{ p.user.username }} :
+<a href='/tuition/postdetails/{{p.id}}'>Details</a>
+
+<hr>
+{% endfor %} {% endblock body %}
